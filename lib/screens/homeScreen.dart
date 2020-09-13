@@ -62,23 +62,29 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 25,
                     ),
                   ),
-                  _sideIcons(context),
-                  HeadingDesc(
-                    text1:
-                        "Lorem Ipsum is simply dummy text of the printing and type setting industry.",
-                    text2: "Detail  --->",
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => DetailPage(),
-                        ),
-                      );
-                    },
-                  ),
                 ],
               ),
             ),
           ),
+          Container(
+            child: Column(
+              children: [
+                _sideIcons(context),
+                HeadingDesc(
+                  text1:
+                      "Lorem Ipsum is simply dummy text of the printing and type setting industry.",
+                  text2: "Detail  --->",
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => DetailPage(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          )
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -123,9 +129,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _sideIcons(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(
+        top: 200,
+      ),
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            width: 300,
+            child: Image.asset("assets/vase.png"),
+          ),
           Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(

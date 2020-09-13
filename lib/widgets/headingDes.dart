@@ -16,6 +16,7 @@ class HeadingDesc extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(
         right: 40,
+        left: 120,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,8 +30,8 @@ class HeadingDesc extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 10.0,
+            padding: const EdgeInsets.only(
+              top: 10.0,
             ),
             child: GestureDetector(
               onTap: onTap,
